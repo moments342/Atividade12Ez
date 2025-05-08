@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.card h2 {
+  font-size: 14px;
+  height: 45px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.preco {
+  color: #ff6600;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.card button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.card button:hover {
+  background-color: #e65c00;
+}
+
+.icone-carrinho {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantidade-carrinho {
+  margin-left: 6px;
+  background-color: #ff6600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.carrinho-painel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 320px;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: white;
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.carrinho-painel.aberto {
+  right: 0;
+}
+
+.carrinho-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.btn-fechar {
+  background: none;
+  color: #ff6600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.btn-fechar:hover {
+  transform: scale(1.1);
+}
+
+.carrinho-itens {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.item-carrinho {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.item-carrinho img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.vazio {
+  text-align: center;
+  color: #aaa;
+}
+
+.carrinho-total {
+  padding: 20px;
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.btn-limpar {
+  background-color: #ff3c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn-limpar:hover {
+  background-color: #e60000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.login-box {
+  background-color: white;
+  padding: 30px 24px;
+  border-radius: 6px;
+  width: 320px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.outlined {
+  border: 1px solid #ccc;
+}
+
+.login-title {
+  text-align: center;
+  color: #ff6600;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.login-input {
+  width: 92%;
+  padding: 12px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-laranja {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-laranja:hover {
+  background-color: #e65c00;
+}
+
+.login-footer {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.btn-link {
+  background: none;
+  color: #ff6600;
+  font-weight: bold;
+  border: none;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+.erro {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+
