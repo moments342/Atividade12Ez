@@ -8,7 +8,7 @@ import Carrinho from "./components/Carrinho";
 import { CarrinhoProvider } from "./context/CarrinhoContext";
 
 function App() {
-  const estaLogado = !!localStorage.getItem("logado");
+  const estaLogado = !!localStorage.getItem("logado"); //o controle esta sendo feito aqui, visto que ainda nao foi pedido um botao de logout
 
   return (
     <Router>
