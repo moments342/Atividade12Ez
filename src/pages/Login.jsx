@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import "../index.css";
 
 export default function Login() {
   const navigate = useNavigate();
+  const { login } = useAuth();
   const [usuario, setUsuario] = useState("");
   const [senha, setSenha] = useState("");
   const [erroLogin, setErroLogin] = useState("");
@@ -18,7 +20,7 @@ export default function Login() {
     );
 
     if (usuarioValido) {
-      localStorage.setItem("logado", usuarioValido.usuario);
+      login(usuarioValido.usuario);
       navigate("/loja");
     } else {
       setErroLogin("Usuário ou senha inválidos.");

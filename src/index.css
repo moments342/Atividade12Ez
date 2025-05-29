@@ -174,13 +174,81 @@ body {
 }
 
 
+.btn-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Oculto por padrão */
+.menu-lateral {
+  display: none;
+}
+
+/* Exibe a barra quando a classe .aberto estiver presente */
+.menu-lateral.aberto {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.5);
+  z-index: 1099;
+  animation: deslizar 0.3s ease forwards;
+}
+
+@keyframes deslizar {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.menu-lateral h3 {
+  margin-top: 60px; 
+  margin-bottom: 20px;
+}
 
 
+.btn-logout {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.btn-logout:hover {
+  background-color: #6b2b00;
+}
 
 
+.btn-menu-link {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: block;
+}
 
-
-
+.btn-menu-link:hover {
+  background-color: #6b2b00;
+}
 
 
 
@@ -268,3 +336,72 @@ body {
 }
 
 
+
+
+
+
+
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.form-container h2 {
+  color: #ff6600;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 90%;
+  max-width: 300px;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+
+.btn-form-submit {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 90%;
+  max-width: 300px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+.btn-form-submit:hover {
+  background-color: #e65c00;
+}
+
+.mensagem {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
+
+.btn-voltar {
+  background: none;
+  color: #ff6600;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-voltar:hover {
+  text-decoration: underline;
+}
